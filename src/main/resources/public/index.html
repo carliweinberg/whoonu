@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Whoonu Charles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="pregame">
+        <span> Enter your name: </span>
+        <input id="username" type="text" />
+        <button onclick="enterGame()">Enter</button>
+    </div>
+    <div id="startGameDiv">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="endGame">
+        <button onclick="endGame()">End Game</button>
+    </div>
+    <div>
+        <h3 id="gameState"></h3>
+    </div>
+    <div id="duringgame">
+        <h3>Score Board</h3>
+        <ul id="playersList"></ul>
+    </div>
+    <div>
+        <h3>Cards Submitted To Judge</h3>
+        <div id="judgePileDiv"></div>
+        <h3>Judge's Ordering</h3>
+        <ul id="judgesOrdering"> </ul>
+    </div>
+    <div id="myHandDiv"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
