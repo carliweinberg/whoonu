@@ -1,0 +1,61 @@
+
+body {
+    background-color: #E1DDDB;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 20px;
+    height: 100%;
+  }
+ul{
+    list-style-type:none;
+}
+
+#myHandDiv > button{
+    border-radius: 7px;
+    padding: 15px 20px;
+    /*background-color: #ABDFF1;*/
+    border: 5px solid #EF6C33;
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 35px;
+    margin: 6px 4px;
+    cursor: pointer;
+}
+
+#duringgame{
+    position: absolute;
+    right: 2%;
+    padding: 1%;
+    border: 5px dashed #0C4A60;
+}
+
+#judgePileDiv > button {
+    font-size: 25px;
+    margin: 6px 4px;
+    border: 5px solid #EF6C33;
+    background-color: white;
+    
+}
+
+#gameState{
+    color: #0C4A60;
+    text-align: center;
+}
+
+#myHandDiv {
+  margin: auto;
+  width: 98%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+/* #pregame, #startGameDiv > button {
+    background-color: rgb(245, 181, 97);
+    border: none;
+    color: black;
+    padding: 20px 30px;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+  } */
+
+  
