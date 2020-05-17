@@ -9,11 +9,13 @@ var judgesOrderedPile = [];
 var isStarted = false;
 var isJudge = false;
 
+var urlBase = "http://whoonu.carliweinberg.com";
+
 function enterGame() {
 
     document.getElementById("pregame").style.display = "none";
     username = document.getElementById("username").value;
-    fetch('http://localhost:8080/players', {
+    fetch(urlBase + '/players', {
         method: 'post',
         body: username
     }).then(function (response) {
@@ -40,7 +42,7 @@ function createBoard() {
 }
 
 function startGame() {
-    fetch('http://localhost:8080/game', {
+    fetch(urlBase + '/game', {
         method: 'post',
         body: ""
     }).then(function (response) {
@@ -57,7 +59,7 @@ function startGameLoop() {
 }
 
 function getGameInfo() {
-    fetch('http://localhost:8080/game', {
+    fetch(urlBase + '/game', {
         method: 'get'
     }).then(function (response) {
         return response.json();
@@ -143,7 +145,7 @@ function createJudgesPileButtonsIfEmpty() {
 
 function judgeSubmitting() {
     if (isJudge) {
-        fetch('http://localhost:8080/judgeSubmit', {
+        fetch(urlBase + '/judgeSubmit', {
             method: 'post',
             body: judgesOrderedPile
         }).then(function (response) {
@@ -208,7 +210,7 @@ function updateGameView() {
 }
 
 function cardSelected(theButton) {
-    fetch('http://localhost:8080/submitToJudge', {
+    fetch(urlBase + '/submitToJudge', {
         method: 'post',
         body: username + "," + theButton.textContent
     }).then(function (response) {
@@ -219,7 +221,7 @@ function cardSelected(theButton) {
 }
 
 function endGame(){
-    fetch('http://localhost:8080/endGame', {
+    fetch(urlBase + '/endGame', {
         method: 'post',
         body: ""
     }).then(function (response) {
